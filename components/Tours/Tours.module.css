@@ -1,0 +1,79 @@
+.tours {
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  position: relative;
+}
+
+.tours::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, #1a1a1a, transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.sectionTitle p {
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.sectionTitle h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.image {
+  aspect-ratio: 3/4;
+  margin-bottom: 16px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.tourNum {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .tours { padding: 60px 20px; }
+  .sectionTitle h2 { font-size: 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

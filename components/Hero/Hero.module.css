@@ -1,0 +1,118 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), #1a1a1a;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, #1a1a1a);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/3caeb38fe7f796c444c893f3fb18503d.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #ccc;
+  max-width: 400px;
+}
+
+.numbers {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+
+.numbers span {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.numbers .active {
+  color: #ff6b35;
+  font-size: 1.5rem;
+}
+
+.info {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 0 60px;
+  z-index: 2;
+}
+
+.infoCard {
+  max-width: 300px;
+}
+
+.infoCard p {
+  color: #aaa;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-bottom: 1px solid #ff6b35;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 1024px) {
+  .title { font-size: 4rem; }
+  .info { flex-direction: column; gap: 30px; bottom: 150px; align-items: center; }
+  .numbers { display: none; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 0 20px; }
+  .title { font-size: 3rem; }
+  .info { display: none; }
+}

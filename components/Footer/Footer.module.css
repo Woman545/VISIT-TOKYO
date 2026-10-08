@@ -1,0 +1,30 @@
+.footer {
+  padding: 60px;
+  background: #0a0a0a;
+  border-top: 1px solid #2a2a2a;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.dot {
+  color: #ff6b35;
+}
+
+.tagline {
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.copy {
+  color: #555;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 40px 20px; }
+}
