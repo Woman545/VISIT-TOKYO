@@ -14,6 +14,6 @@ export default function Header() {
         <a href="#">КОНТАКТЫ</a>
       </nav>
       <button className={styles.search}>🔍</button>
-    </header>
+    </headerr>
   );
 }
